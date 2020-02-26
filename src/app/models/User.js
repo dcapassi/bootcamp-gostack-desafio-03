@@ -11,8 +11,7 @@ class User extends Model {
         password: Sequelize.VIRTUAL,
       },
       {
-        sequelize,
-      }
+        sequelize,      }
     );
     this.addHook('beforeSave', async user => {
       if (user.password) {
